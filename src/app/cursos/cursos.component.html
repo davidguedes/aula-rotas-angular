@@ -1,0 +1,29 @@
+<h5>Lista de cursos</h5>
+<br />
+<ul class="list-group">
+  <li
+    class="list-group-item list-group-item-action"
+    [routerLink]="['/cursos', curso.id]"
+    routerLinkActive="active"
+    *ngFor="let curso of cursos"
+  >
+    {{ curso.nome }}
+  </li>
+</ul>
+<br />
+<p>
+  {{ pagina }}
+</p>
+<br />
+<button type="button" class="btn btn-primary" (click)="proximaPagina()">
+  Próxima página
+</button>
+<br />
+<button
+  type="button"
+  class="btn btn-primary"
+  (click)="paginaAnterior()"
+  *ngIf="pagina > 1"
+>
+  Página anterior
+</button>

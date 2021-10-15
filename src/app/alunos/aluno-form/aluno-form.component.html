@@ -1,0 +1,18 @@
+<h5>Criar/Editar Aluno</h5>
+
+<div>
+  <div class="form-group">
+    <label for="alunoID">ID:</label>
+    <input readonly type="text" [(ngModel)]="aluno.id" class="form-control" id="alunoID" placeholder="Digite seu ID">
+  </div>
+  <div class="form-group">
+    <label for="alunoNome">Nome</label>
+    <input type="text" [(ngModel)]="aluno.nome" class="form-control" id="alunoNome" placeholder="Digite seu nome" (input)="onInput()">
+  </div>
+  <div class="form-group">
+    <label for="emailAluno">Email:</label>
+    <input type="email" [(ngModel)]="aluno.email" class="form-control" id="emailAluno" aria-describedby="emailHelp" placeholder="Digite seu email" (input)="onInput()">
+    <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu e-mail com mais ninguém.</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</div>
